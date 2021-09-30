@@ -32,36 +32,14 @@ class HomePage : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        /*
-        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
 
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                when(tab?.text){
-                    getString(R.string.tab_1) -> {
-                    }
-                    getString(R.string.tab_2) -> {
-                    }
-                    getString(R.string.tab_3) -> {
-                    }
-                }
-                // Handle tab select
-            }
+        val tabLayout : TabLayout = view.findViewById(R.id.first_tab_layout)
 
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-                // Handle tab reselect
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-                // Handle tab unselect
-            }
-        })
-
-         */
         demoCollectionAdapter = DemoCollectionAdapter(this)
         viewPager = view.findViewById(R.id.page_view)
         viewPager.adapter = demoCollectionAdapter
 
-        val tabLayout : TabLayout = view.findViewById(R.id.first_tab_layout)
+
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = "Pagina ${(position + 1)}"
         }.attach()
