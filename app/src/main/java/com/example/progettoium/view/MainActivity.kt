@@ -11,9 +11,9 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.progettoium.FirstFragment
+import com.example.progettoium.view.navFragment.FirstFragment
 import com.example.progettoium.R
-import com.example.progettoium.SecondFragment
+import com.example.progettoium.view.navFragment.SecondFragment
 import com.example.progettoium.databinding.ActivityMainBinding
 import me.ibrahimsn.lib.SmoothBottomBar
 
