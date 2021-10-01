@@ -9,9 +9,12 @@ import android.widget.TextView
 import androidx.fragment.app.FragmentTransaction
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.progettoium.FirstFragment
 import com.example.progettoium.R
+import com.example.progettoium.SecondFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import me.ibrahimsn.lib.SmoothBottomBar
 
 
 class HomePage : Fragment() {
@@ -19,8 +22,10 @@ class HomePage : Fragment() {
     private lateinit var demoCollectionAdapter: DemoCollectionAdapter
     private lateinit var viewPager: ViewPager2
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
 
     override fun onCreateView(
@@ -35,18 +40,25 @@ class HomePage : Fragment() {
 
         val tabLayout : TabLayout = view.findViewById(R.id.first_tab_layout)
 
+
         demoCollectionAdapter = DemoCollectionAdapter(this)
         viewPager = view.findViewById(R.id.page_view)
         viewPager.adapter = demoCollectionAdapter
 
 
+
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = "Pagina ${(position + 1)}"
         }.attach()
+
+
+
+
     }
 
 
 }
+
 
 
 class DemoCollectionAdapter(fragment: Fragment) : FragmentStateAdapter(fragment) {

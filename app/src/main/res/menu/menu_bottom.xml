@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/first_fragment_menu"
+        android:title="home"
+        android:icon="@drawable/ic_home_white_24dp"/>
+
+    <item
+        android:id="@+id/second_fragment_menu"
+        android:title="OkTest"
+        android:icon="@drawable/ic_multiline_chart_white_24dp"/>
+
+    <item
+        android:id="@+id/third_fragment_menu"
+        android:title="Profile"
+        android:icon="@drawable/ic_person_outline_white_24dp"/>
+
+
+</menu>
